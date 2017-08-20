@@ -1,5 +1,3 @@
-package solution1;
-
 import java.util.ArrayList;
 
 /**
@@ -7,7 +5,12 @@ import java.util.ArrayList;
  */
 public class FlowerStore {
 
+    double wallet = 0;
+
     public ArrayList<Flower> sell(int rosesAmount, int chamomileAmount, int tulipAmount){
+
+        wallet = rosesAmount * Rose.PRICE + chamomileAmount * Chamomile.PRICE +
+                tulipAmount * Tulip.PRICE;
 
         ArrayList<Flower> bouquet = new ArrayList<>();
 
@@ -27,6 +30,9 @@ public class FlowerStore {
 
     public ArrayList<Flower> sellSequence(int rosesAmount, int chamomileAmount, int tulipAmount){
         ArrayList<Flower> bouquet = new ArrayList<>();
+
+        wallet = rosesAmount * Rose.PRICE + chamomileAmount * Chamomile.PRICE +
+                tulipAmount * Tulip.PRICE;
 
         for (int i = 0; i < Math.max(rosesAmount, Math.max(chamomileAmount, tulipAmount)) + 2; i++)
         {
