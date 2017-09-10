@@ -2,5 +2,8 @@
  * Created by user on 20.08.17.
  */
 public class Rose extends Flower {
-    static double PRICE = 100;
+    final double PRICE = 100;
+
+    public Rose() {
+    }
 }
